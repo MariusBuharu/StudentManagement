@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>919e1efa-1993-4a31-8ebc-984b19ee039d.SCHEMA:student_management.public</OriginalElement>
+  <nodes>
+    <node x="-37.78791551361743" y="23.09769630301239">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.role</node>
+    <node x="-258.5677842380648" y="233.53485083157403">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.institution</node>
+    <node x="-295.59624137165264" y="-37.89368760291569">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address</node>
+    <node x="-3.5414462821099875" y="169.43666162674725">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user</node>
+    <node x="-166.9069566797803" y="-175.08079095698528">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address_type</node>
+    <node x="-292.0558066578141" y="481.94283120449785">919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user_institution</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address" relationship="REFERENCES">
+      <point x="-89.49955371789001" y="3.3837325275953845E-4" />
+      <point x="-47.068" y="328.937" />
+      <point x="-47.068" y="203.0" />
+      <point x="-198.096" y="203.0" />
+      <point x="2.413716526348253E-4" y="104.49968760291569" />
+    </edge>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user_institution" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user" relationship="REFERENCES">
+      <point x="88.5" y="0.0" />
+      <point x="85.95855371789001" y="519.9428312044979" />
+      <point x="0.0" y="159.5" />
+    </edge>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.institution" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address" relationship="REFERENCES">
+      <point x="-2.1576193520900233E-4" y="-93.49985083157404" />
+      <point x="-161.568" y="203.0" />
+      <point x="-198.096" y="203.0" />
+      <point x="2.413716526348253E-4" y="104.49968760291569" />
+    </edge>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.role" relationship="REFERENCES">
+      <point x="-47.24646923150744" y="-159.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address_type" relationship="REFERENCES">
+      <point x="90.0" y="-104.5" />
+      <point x="-4.689284691872331" y="38.5" />
+    </edge>
+    <edge source="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.app_user_institution" target="919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.institution" relationship="REFERENCES">
+      <point x="41.98802241974931" y="-38.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="-60.0" y="191.0" />
+  <SelectedNodes>
+    <node>919e1efa-1993-4a31-8ebc-984b19ee039d.TABLE:student_management.public.address_type</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

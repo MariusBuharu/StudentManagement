@@ -1,0 +1,60 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class address {
+   address_type_id: bigint
+   country: varchar(45)
+   city: varchar(45)
+   address_line_one: varchar(500)
+   address_line_two: varchar(500)
+   date_added: timestamp
+   version: integer
+   id: bigint
+}
+class address_type {
+   type: varchar(65)
+   id: bigint
+}
+class app_user {
+   role_id: bigint
+   address_id: bigint
+   first_name: varchar(45)
+   last_name: varchar(45)
+   email: varchar(100)
+   username: varchar(45)
+   phone_number: varchar(11)
+   password: varchar(100)
+   dob: date
+   is_active: boolean
+   date_added: timestamp
+   version: integer
+   id: bigint
+}
+class app_user_institution {
+   institution_id: bigint
+   app_user_id: bigint
+}
+class institution {
+   address_id: bigint
+   institution_name: varchar(100)
+   description: varchar(500)
+   founded_date: date
+   date_added: timestamp
+   version: integer
+   id: bigint
+}
+class role {
+   role_name: varchar(45)
+   id: bigint
+}
+
+address               -[#595959,plain]-^  address_type         : "address_type_id:id"
+app_user              -[#595959,plain]-^  address              : "address_id:id"
+app_user              -[#595959,plain]-^  role                 : "role_id:id"
+app_user_institution  -[#595959,plain]-^  app_user             : "app_user_id:id"
+app_user_institution  -[#595959,plain]-^  institution          : "institution_id:id"
+institution           -[#595959,plain]-^  address              : "address_id:id"
+@enduml
